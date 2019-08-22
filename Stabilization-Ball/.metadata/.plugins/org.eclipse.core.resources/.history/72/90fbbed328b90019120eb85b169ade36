@@ -1,0 +1,45 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class Deneme extends JPanel{
+	
+	public Deneme(){
+		super();
+		setSize(500,400);
+		setPreferredSize(new Dimension(500,400));
+		setFocusable(true);
+		
+		
+		
+	}
+	
+	public void paint(Graphics g){
+		super.paint(g);
+		g.setColor(Color.BLACK);
+		g.drawRect(0, 0, getWidth(), getHeight());
+		
+		
+		
+	}
+	
+	public static void main(String[] args){
+		
+		Deneme deneme = new Deneme();
+		
+		JFrame frame = new JFrame();
+		frame.setTitle("VeysBULUT");
+		frame.setSize(new Dimension(500,400));
+		frame.pack();
+		frame.add(deneme);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
+}
